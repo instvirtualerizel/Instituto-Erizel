@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Virtual Erizel</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #163C5E;
+      --accent: #F06522;
+      --bg-light: #F4F7F9;
+      --text-dark: #2C3E50;
+      --white: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+    header {
+      background-color: var(--white);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 100;
+    }
+
+    .logo-img { height: 48px; width: auto; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #0d263d 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 45px 20px 55px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    .hero-logo { max-width: 170px; margin-bottom: 20px; filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25)); }
+    .hero h1 { font-size: 2.1rem; margin-bottom: 12px; }
+    .hero p { font-size: 1.1rem; margin-bottom: 20px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    .badge-schedule {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(240, 101, 34, 0.35);
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary { background-color: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(240, 101, 34, 0.3); }
+    .btn-primary:hover { background-color: #d95416; transform: translateY(-2px); }
+    .btn-whatsapp { background-color: #25D366; color: var(--white); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
+    .btn-whatsapp:hover { background-color: #1eb956; transform: translateY(-2px); }
+
+    .section { padding: 45px 20px; max-width: 900px; margin: 0 auto; }
+    .section-title { text-align: center; color: var(--primary); font-size: 1.8rem; margin-bottom: 30px; position: relative; }
+    .section-title::after { content: ''; display: block; width: 60px; height: 4px; background-color: var(--accent); margin: 8px auto 0; border-radius: 2px; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { background-color: var(--white); padding: 25px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); border-top: 4px solid var(--accent); }
+    .card-icon { font-size: 2rem; color: var(--primary); margin-bottom: 12px; }
+    .card h3 { color: var(--primary); margin-bottom: 8px; }
+
+    .schedule-box {
+      background-color: var(--white);
+      border: 2px dashed var(--primary);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    footer { background-color: var(--primary); color: var(--white); text-align: center; padding: 25px; margin-top: 40px; font-size: 0.9rem; }
+
+    @media (min-width: 600px) {
+      .cta-buttons { flex-direction: row; max-width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/3ykG4Sj/image-daaa0c.png" alt="Instituto Virtual Erizel" class="logo-img">
+    <a href="https://wa.me/525646996995?text=Hola,%20quisiera%20pedir%20informes%20de%20los%20cursos" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">
+      <i class="fab fa-whatsapp"></i> Contactar
+    </a>
+  </header>
+
+  <section class="hero">
+    <img src="https://i.ibb.co/3ykG4Sj/image-daaa0c.png" alt="Instituto Virtual Erizel" class="hero-logo">
+    <h1>Asegura tu Ingreso a Prepa o Universidad</h1>
+    <p>Asesorías y cursos en línea personalizados con profesores capacitados.</p>
+    
+    <div class="badge-schedule">
+      <i class="far fa-calendar-alt"></i> Clases en Sábados o Domingos
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScUe59_sB_RhIlkSKv6SFy-kiOAddd6L6lHmZPbMjPkp44bvQ/viewform?usp=dialog" target="_blank" class="btn btn-primary">
+        <i class="fas fa-clipboard-check"></i> Examen Diagnóstico Gratis
+      </a>
+      <a href="https://wa.me/525646996995?text=Hola,%20quisiera%20pedir%20informes%20de%20los%20cursos" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Directo
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Nuestros Cursos</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Ingreso a Prepa (COMIPEMS)</h3>
+        <p>Prepara todas las materias del examen con guías actualizadas y exámenes de simulación.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-university"></i></div>
+        <h3>Ingreso a Universidad</h3>
+        <p>Capacitación enfocada para exámenes de admisión (UNAM, IPN, UAM, EXANI-II) con ejercicios reales.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Asesorías Particulares</h3>
+        <p>Refuerza temas específicos de Matemáticas, Física, Química o Español a tu propio ritmo.</p>
+      </div>
+    </div>
+
+    <div class="schedule-box">
+      <h3 style="color: var(--primary); margin-bottom: 8px;"><i class="far fa-clock"></i> Horarios de Fin de Semana</h3>
+      <p>Modalidad cómoda e intensiva. Elige tomar tus clases los días <strong>Sábados o Domingos</strong>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Instituto Virtual Erizel</p>
+    <p style="margin-top: 5px;"><i class="fab fa-whatsapp"></i> +52 56 4699 6995</p>
+  </footer>
+
+</body>
+</html>
